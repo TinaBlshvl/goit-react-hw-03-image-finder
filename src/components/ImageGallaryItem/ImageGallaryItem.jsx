@@ -1,5 +1,5 @@
 import css from '../styles/Styles.module.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 export const ImageGalleryItem = ({ item }) => {
   return (
@@ -14,9 +14,9 @@ export const ImageGalleryItem = ({ item }) => {
   );
 };
 
-ImageGalleryItem.PropTypes = {
-  item: PropTypes.shape({
-    webformatURL: PropTypes.string.isRequired,
-    largeImageURL: PropTypes.string.isRequired,
-  }).isRequired,
-};
+// ImageGalleryItem.PropTypes = {
+//   item: PropTypes.shape({
+//     webformatURL: PropTypes.string.isRequired,
+//     largeImageURL: PropTypes.string.isRequired,
+//   }).isRequired,
+// };

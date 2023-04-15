@@ -1,12 +1,17 @@
 import css from '../styles/Styles.module.css';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 // import { useLayoutEffect } from 'react';
 
 import { ImageGalleryItem } from 'components/ImageGallaryItem/ImageGallaryItem';
 
-export const ImageGallery = ({ items }) => {
+export const ImageGallery = ({ items, openModal }) => {
   return (
-    <ul className={css.imageGallery}>
+    <ul
+      className={css.imageGallery}
+      onClick={e => {
+        openModal(e.target);
+      }}
+    >
       {/* {items.map(item => (
         <li key={item.id}>
           return(
@@ -22,10 +27,7 @@ export const ImageGallery = ({ items }) => {
   );
 };
 
-ImageGallery.PropTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.bool.isRequired,
-    }).isRequired
-  ).isRequired,
-};
+// ImageGallery.propTypes = {
+//   items: PropTypes.array.isRequired,
+//   openModal: func.isRequired,
+// };
